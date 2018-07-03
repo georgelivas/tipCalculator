@@ -32,16 +32,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 1
         billAmountTextField.calculateButtonAction = {
-            // 2
-            print("calculate button tapped")
+             self.calculate()
         }
-        
-//        billAmountTextField.calculateButtonAction = {
-//            // 2
-//            print("calculate button tapped")
-//        }
     }
     
     @IBAction func themeToggled(_ sender: UISwitch) {
@@ -53,10 +46,36 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tipPercentChanged(_ sender: UISegmentedControl) {
+        calculate()
     }
     
     @IBAction func resetButtonTap(_ sender: Any) {
         print("reset button tapped")
+    }
+    
+    func calculate() {
+        // dismiss keyboard
+        if self.billAmountTextField.isFirstResponder {
+            self.billAmountTextField.resignFirstResponder()
+        }
+        
+        guard let billAmountText = self.billAmountTextField.text,
+            let billAmount = Double(billAmountText) else {
+                return
+        }
+        
+        let roundedBillAmount = (100 * billAmount).rounded() / 100
+        
+        let tipPercent = 0.15
+        let tipAmount = roundedBillAmount * tipPercent
+        let roundedTipAmount = (100 * tipAmount).rounded() / 100
+        
+        let totalAmount = roundedBillAmount + roundedTipAmount
+        
+        // Update UI
+        self.billAmountTextField.text = String(format: "%.2f", roundedBillAmount)
+        self.tipValueLabel.text = String(format: "%.2f", roundedTipAmount)
+        self.totalValueLabel.text = String(format: "%.2f", totalAmount)
     }
     
 }
