@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var themeswich: UISwitch!
     
     @IBOutlet weak var inputCard: UIView!
+    
     @IBOutlet weak var billAmountTextField: BillAmountTextField!
     @IBOutlet weak var tipPercentSegmentedControl: UISegmentedControl!
     
@@ -30,6 +31,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 1
+        billAmountTextField.calculateButtonAction = {
+            // 2
+            print("calculate button tapped")
+        }
+        
+//        billAmountTextField.calculateButtonAction = {
+//            // 2
+//            print("calculate button tapped")
+//        }
     }
     
     @IBAction func themeToggled(_ sender: UISwitch) {

@@ -211,7 +211,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="billAmountTextField" destination="gcn-gc-1X4" id="1KS-4B-hXf"/>
+                        <outlet property="billAmountTextField" destination="Yxf-DO-hXs" id="xbi-zq-KWK"/>
                         <outlet property="headerTitle" destination="VBp-Px-HQf" id="Gq2-kZ-gGQ"/>
                         <outlet property="headerView" destination="8bC-Xf-vdC" id="uWF-PC-2sl"/>
                         <outlet property="inputCard" destination="gcn-gc-1X4" id="fBX-gn-ftD"/>
