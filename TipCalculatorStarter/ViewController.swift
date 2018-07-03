@@ -17,11 +17,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var themeswich: UISwitch!
     
     @IBOutlet weak var inputCard: UIView!
-    @IBOutlet weak var billAmountTextField: UITextField!
+    @IBOutlet weak var billAmountTextField: BillAmountTextField!
     @IBOutlet weak var tipPercentSegmentedControl: UISegmentedControl!
     
+    @IBOutlet weak var outputCard: UIView!
+    @IBOutlet weak var tipAmLabel: UILabel!
+    @IBOutlet weak var tipValueLabel: UILabel!
+    @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var totalValueLabel: UILabel!
     
-    
+    @IBOutlet weak var resetButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +41,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tipPercentChanged(_ sender: UISegmentedControl) {
+    }
+    
+    @IBAction func resetButtonTap(_ sender: Any) {
+        print("reset button tapped")
     }
     
 }

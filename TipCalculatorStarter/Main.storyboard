@@ -63,7 +63,7 @@
                                                         <color key="textColor" name="tcWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$0.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yxf-DO-hXs">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$0.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yxf-DO-hXs" customClass="BillAmountTextField" customModule="TipCalculatorStarter" customModuleProvider="target">
                                                         <rect key="frame" x="222" y="0.0" width="118" height="30"/>
                                                         <color key="tintColor" name="tcHotPink"/>
                                                         <constraints>
@@ -118,13 +118,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCo-qF-cSg">
                                 <rect key="frame" x="15" y="378" width="384" height="250"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="vPK-1E-VeQ">
-                                        <rect key="frame" x="22" y="68" width="340" height="83"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="vPK-1E-VeQ">
+                                        <rect key="frame" x="22" y="50" width="340" height="83"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o6i-ff-2Um">
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o6i-ff-2Um">
                                                 <rect key="frame" x="0.0" y="0.0" width="340" height="24"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tip Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8a-0t-BbG">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8a-0t-BbG">
                                                         <rect key="frame" x="0.0" y="0.0" width="110" height="24"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="110" id="em3-14-GEx"/>
@@ -133,7 +133,7 @@
                                                         <color key="textColor" name="tcCharcoal"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yV-Db-h4p">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yV-Db-h4p">
                                                         <rect key="frame" x="110" y="0.0" width="230" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                                         <color key="textColor" name="tcBlack"/>
@@ -141,10 +141,10 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j7d-4y-wH1">
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j7d-4y-wH1">
                                                 <rect key="frame" x="0.0" y="59" width="340" height="24"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaM-Mt-qlm">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaM-Mt-qlm">
                                                         <rect key="frame" x="0.0" y="0.0" width="110" height="24"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="110" id="Dix-G0-IP8"/>
@@ -153,7 +153,7 @@
                                                         <color key="textColor" name="tcCharcoal"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfY-eD-PPo">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfY-eD-PPo">
                                                         <rect key="frame" x="110" y="0.0" width="230" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                         <color key="textColor" name="tcBlack"/>
@@ -172,15 +172,22 @@
                                 <constraints>
                                     <constraint firstItem="vPK-1E-VeQ" firstAttribute="leading" secondItem="GCo-qF-cSg" secondAttribute="leading" constant="22" id="84E-QU-xtT"/>
                                     <constraint firstAttribute="trailing" secondItem="vPK-1E-VeQ" secondAttribute="trailing" constant="22" id="or3-MJ-z3b"/>
+                                    <constraint firstItem="vPK-1E-VeQ" firstAttribute="top" secondItem="GCo-qF-cSg" secondAttribute="top" constant="50" id="rk7-sg-k5b"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzL-mf-dtR">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzL-mf-dtR">
                                 <rect key="frame" x="15" y="652" width="384" height="60"/>
                                 <color key="backgroundColor" name="tcDarkBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="QOf-sm-aLp"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" name="tcWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PFu-cY-YiP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="tcOffWhite"/>
@@ -208,8 +215,14 @@
                         <outlet property="headerTitle" destination="VBp-Px-HQf" id="Gq2-kZ-gGQ"/>
                         <outlet property="headerView" destination="8bC-Xf-vdC" id="uWF-PC-2sl"/>
                         <outlet property="inputCard" destination="gcn-gc-1X4" id="fBX-gn-ftD"/>
+                        <outlet property="outputCard" destination="GCo-qF-cSg" id="R46-rg-UJe"/>
+                        <outlet property="resetButton" destination="zzL-mf-dtR" id="BMk-cd-cGJ"/>
                         <outlet property="themeswich" destination="Lim-ND-FRo" id="fsp-ut-iOS"/>
+                        <outlet property="tipAmLabel" destination="M8a-0t-BbG" id="L5L-7V-dBN"/>
                         <outlet property="tipPercentSegmentedControl" destination="gcn-gc-1X4" id="ET1-gg-4On"/>
+                        <outlet property="tipValueLabel" destination="2yV-Db-h4p" id="pGN-xf-l1c"/>
+                        <outlet property="totalLabel" destination="CaM-Mt-qlm" id="w45-HU-gEy"/>
+                        <outlet property="totalValueLabel" destination="qfY-eD-PPo" id="xAo-0F-2p7"/>
                         <outlet property="view" destination="8bC-Xf-vdC" id="1cN-4w-jMk"/>
                     </connections>
                 </viewController>
