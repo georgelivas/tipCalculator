@@ -96,7 +96,7 @@
                                                         </segments>
                                                         <color key="tintColor" name="tcHotPink"/>
                                                         <connections>
-                                                            <action selector="tipPercentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="dDy-Q8-Vzw"/>
+                                                            <action selector="tipPercentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="hnt-V1-5fF"/>
                                                         </connections>
                                                     </segmentedControl>
                                                 </subviews>
@@ -219,7 +219,7 @@
                         <outlet property="resetButton" destination="zzL-mf-dtR" id="BMk-cd-cGJ"/>
                         <outlet property="themeswich" destination="Lim-ND-FRo" id="fsp-ut-iOS"/>
                         <outlet property="tipAmLabel" destination="M8a-0t-BbG" id="L5L-7V-dBN"/>
-                        <outlet property="tipPercentSegmentedControl" destination="gcn-gc-1X4" id="ET1-gg-4On"/>
+                        <outlet property="tipPercentSegmentedControl" destination="VD8-Cz-WNT" id="Ilj-MP-3vx"/>
                         <outlet property="tipValueLabel" destination="2yV-Db-h4p" id="pGN-xf-l1c"/>
                         <outlet property="totalLabel" destination="CaM-Mt-qlm" id="w45-HU-gEy"/>
                         <outlet property="totalValueLabel" destination="qfY-eD-PPo" id="xAo-0F-2p7"/>
